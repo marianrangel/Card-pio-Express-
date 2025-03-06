@@ -1,8 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
     text-align: center;
     overflow-x: hidden;
 }
@@ -68,6 +72,7 @@ article {
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 article img {
@@ -90,6 +95,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
     article {
         flex-direction: column;
         text-align: center;
@@ -98,14 +112,5 @@ footer {
     article img {
         width: 100%;
         max-width: 300px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
     }
 }
