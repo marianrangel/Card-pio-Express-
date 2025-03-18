@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,8 @@ body {
     background-color: #f8f8f8;
     text-align: center;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -94,6 +97,17 @@ footer {
     width: 100%;
 }
 
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -112,5 +126,51 @@ footer {
     article img {
         width: 100%;
         max-width: 300px;
+    }
+
+
+    input, textarea {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    section {
+        width: 95vw;
+        padding: 10px;
+    }
+
+ 
+    main {
+        padding: 10px;
+    }
+
+   
+    h1, h2, h3, p {
+        font-size: 1.2em;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    article {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 5px;
     }
 }
