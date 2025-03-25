@@ -1,176 +1,197 @@
-
+/* Resetando margem, padding e definindo box-sizing para todos os elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo geral para o corpo da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; 
     background-color: #f8f8f8;
-    text-align: center;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+    text-align: center; 
+    overflow-x: hidden; 
+    margin: 0; 
+    padding: 0; 
 }
 
+/* Estilo para o cabeçalho da página */
 header {
     background-color: #ff5733;
-    color: white;
-    padding: 20px;
+    color: white; 
+    padding: 20px; /* Espaçamento interno */
 }
 
+/* Ajuste para o logo no cabeçalho */
 header img {
-    max-width: 150px;
+    max-width: 150px; /* Tamanho máximo do logo */
 }
 
+/* Estilo para a barra de navegação */
 nav {
-    background-color: #333;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    background-color: #333; 
+    padding: 10px 0; /* Espaçamento superior e inferior */
+    display: flex; /* Usando flexbox */
+    justify-content: center; /* Alinhando os itens no centro */
+    flex-wrap: wrap; /* Permitindo que os itens quebrem a linha */
 }
 
+/* Estilo para a lista de links de navegação */
 nav ul {
-    list-style: none;
+    list-style: none; /* Removendo os marcadores */
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex; /* Usando flexbox */
+    flex-wrap: wrap; /* Permitindo que os itens quebrem a linha */
+    justify-content: center; /* Alinhando os itens no centro */
 }
 
+/* Estilo para os itens da lista de navegação */
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px; 
 }
 
+/* Estilo para os links de navegação */
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
+/* Estilo para o conteúdo principal */
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    display: flex; /* Usando flexbox */
+    flex-direction: column; /* Alinhando os itens verticalmente */
+    align-items: center; /* Centralizando os itens */
+    padding: 20px; /* Espaçamento interno */
 }
 
+/* Estilo para cada seção do conteúdo principal */
 section {
-    width: 90vw;
-    max-width: 900px;
-    margin-bottom: 30px;
+    width: 90vw; /* Largura de 90% da tela */
+    max-width: 900px; /* Largura máxima de 900px */
+    margin-bottom: 30px; /* Espaçamento inferior */
 }
 
+/* Estilo para os artigos dentro das seções */
 article {
     background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    width: 100%;
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    text-align: left; 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; /* Espaçamento entre os elementos */
+    flex-wrap: wrap; /* Permitindo que os elementos quebrem a linha */
+    width: 100%; 
 }
 
+/* Estilo para as imagens nos artigos */
 article img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 10px;
+    width: 100%; /* Largura total da imagem */
+    max-width: 150px; /* Largura máxima de 150px */
+    height: auto; /* Mantendo a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
 }
 
+/* Estilo para o conteúdo de texto dentro dos artigos */
 .text-content {
-    flex: 1;
+    flex: 1; /* Permitindo que o conteúdo de texto ocupe o espaço restante */
 }
 
+/* Estilo para o rodapé da página */
 footer {
-    background-color: #ff5733;
-    color: white;
-    padding: 10px;
-    position: relative;
-    width: 100%;
+    background-color: #ff5733; /* Cor de fundo laranja */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    position: relative; /* Posição relativa */
+    width: 100%; /* Largura total */
 }
 
-
+/* Estilo para inputs e textareas (campos de formulário) */
 input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Margem superior e inferior */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    box-sizing: border-box; /* Incluindo padding e border no cálculo do tamanho */
 }
 
-
+/* Estilos responsivos para telas com largura máxima de 768px */
 @media (max-width: 768px) {
+    /* Ajustando a navegação para dispositivos menores */
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Colocando os itens em coluna */
+        align-items: center; /* Centralizando os itens */
     }
 
     nav ul li {
         margin: 10px 0;
     }
 
+    /* Ajustando os artigos para dispositivos menores */
     article {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Colocando os itens em coluna */
+        text-align: center; /* Centralizando o texto */
     }
 
+    /* Ajustando o tamanho das imagens nos artigos */
     article img {
-        width: 100%;
-        max-width: 300px;
+        width: 100%; /* Largura total */
+        max-width: 300px; /* Largura máxima de 300px */
     }
 
-
+    /* Ajustando o tamanho dos inputs e textareas */
     input, textarea {
-        padding: 12px;
-        font-size: 16px;
+        padding: 12px; /* Maior espaçamento interno */
+        font-size: 16px; /* Aumentando o tamanho da fonte */
     }
 
+    /* Ajustando o tamanho da seção */
     section {
-        width: 95vw;
-        padding: 10px;
+        width: 95vw; /* Largura de 95% da tela */
+        padding: 10px; /* Menos padding */
     }
 
- 
+    /* Ajustando o padding do conteúdo principal */
     main {
-        padding: 10px;
+        padding: 10px; /* Menos padding */
     }
 
-   
+    /* Ajustando o tamanho das fontes para títulos e parágrafos */
     h1, h2, h3, p {
-        font-size: 1.2em;
+        font-size: 1.2em; /* Aumentando o tamanho das fontes */
     }
 }
 
-
+/* Estilos responsivos para telas com largura máxima de 480px */
 @media (max-width: 480px) {
+    /* Ajustando o cabeçalho para telas menores */
     header {
-        padding: 10px;
+        padding: 10px; /* Menos padding */
     }
 
+    /* Ajustando a navegação para telas menores */
     nav ul {
-        flex-direction: column;
-        width: 100%;
+        flex-direction: column; /* Colocando os itens em coluna */
+        width: 100%; /* Largura total */
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 5px 0; /* Menos espaço entre os itens */
     }
 
+    /* Ajustando os artigos para telas menores */
     article {
-        padding: 10px;
+        padding: 10px; /* Menos padding */
     }
 
+    /* Ajustando o rodapé para telas menores */
     footer {
-        font-size: 14px;
-        padding: 5px;
+        font-size: 14px; /* Menor tamanho de fonte */
+        padding: 5px; /* Menos padding */
     }
 }
