@@ -7,7 +7,6 @@
     <meta name="description" content="Cardápio online do restaurante Coco Bambu, com entradas, pratos principais e sobremesas deliciosas.">
     <title>Cardápio Online - Coco Bambu</title>
     <link rel="stylesheet" href="index.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -17,63 +16,68 @@
     </header>
     
     <!-- nav: Define o menu de navegação com links para diferentes seções do conteúdo da página. -->
-    <nav>
+    <nav role="menu" aria-label="Menu de navegação">
         <ul>
-            <li><a href="#entradas">Entradas</a></li>
-            <li><a href="#pratos-principais">Pratos Principais</a></li>
-            <li><a href="#sobremesas">Sobremesas</a></li>
+            <li role="menuitem"><a href="#entradas">Entradas</a></li>
+            <li role="menuitem"><a href="#pratos-principais">Pratos Principais</a></li>
+            <li role="menuitem"><a href="#sobremesas">Sobremesas</a></li>
+            <li role="menuitem"><a href="#" id="verCarrinho">Carrinho (<span id="contadorCarrinho">0</span>)</a></li>
         </ul>
     </nav>
     
     <!-- main: Representa o conteúdo principal da página, agrupando as seções temáticas do site. -->
     <main>
-        <!-- section: Define uma área específica do conteúdo, como categorias de pratos, dentro do corpo da página. -->
         <section id="entradas">
             <h2>Entradas</h2>
-            <!-- article: Representa uma unidade de conteúdo dentro de uma seção, geralmente de forma independente. -->
             <article>
                 <img src="entradinha.png" alt="Casquinha de caranguejo acompanhada de farofa e molho de coco">
                 <div class="text-content">
                     <h3>Entradinha Casquinha de Caranguejo</h3>
                     <p>110g de carne de caranguejo refogada com cheiro-verde, tomate e leite de coco natural. Acompanhado de farofa da Bahia e molho de coco.</p>
                     <p>R$ 62,00</p>
+                    <button class="adicionarCarrinho" data-nome="Entradinha Casquinha de Caranguejo" data-preco="62.00">Adicionar</button>
                 </div>
             </article>
         </section>
         
-        <!-- section: Define uma área específica do conteúdo, como categorias de pratos, dentro do corpo da página. -->
         <section id="pratos-principais">
             <h2>Pratos Principais</h2>
-            <!-- article: Representa uma unidade de conteúdo dentro de uma seção, geralmente de forma independente. -->
             <article>
                 <img src="prato principal.png" alt="Picanha grelhada acompanhada de arroz, mandioca, vinagrete e farofa amarela">
                 <div class="text-content">
                     <h3>Picanha Coco Bambu</h3>
                     <p>600g de picanha grelhada, acompanhada de vinagrete, farofa amarela, mandioca e arroz biro-biro.</p>
                     <p>R$ 225,00</p>
+                    <button class="adicionarCarrinho" data-nome="Picanha Coco Bambu" data-preco="225.00">Adicionar</button>
                 </div>
             </article>
         </section>
         
-        <!-- section: Define uma área específica do conteúdo, como categorias de pratos, dentro do corpo da página. -->
         <section id="sobremesas">
             <h2>Sobremesas</h2>
-            <!-- article: Representa uma unidade de conteúdo dentro de uma seção, geralmente de forma independente. -->
             <article>
                 <img src="sobremesa.png" alt="Petit Gateau de chocolate com sorvete de creme">
                 <div class="text-content">
                     <h3>Petit Gateau de Chocolate</h3>
                     <p>Bolinho quente de chocolate acompanhado de sorvete de creme.</p>
                     <p>R$ 50,00</p>
+                    <button class="adicionarCarrinho" data-nome="Petit Gateau de Chocolate" data-preco="50.00">Adicionar</button>
                 </div>
             </article>
         </section>
     </main>
     
+    <!-- Modal de Carrinho -->
+    <div id="carrinhoContainer" style="display: none; padding: 20px;">
+        <h2>Itens no Carrinho</h2>
+        <!-- Os itens do carrinho serão inseridos aqui dinamicamente via JavaScript -->
+    </div>
+    
     <!-- footer: Define a parte inferior da página, com informações adicionais, como copyright ou contato. -->
     <footer>
         <p>&copy; 2025 Restaurante Coco Bambu. Todos os direitos reservados.</p>
     </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,197 +1,155 @@
-/* Resetando margem, padding e definindo box-sizing para todos os elementos */
+/* Resetando margens e preenchimentos para garantir um layout consistente */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo geral para o corpo da página */
+/* Definindo a tipografia básica e cores */
 body {
-    font-family: Arial, sans-serif; 
-    background-color: #f8f8f8;
-    text-align: center; 
-    overflow-x: hidden; 
-    margin: 0; 
-    padding: 0; 
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Estilo para o cabeçalho da página */
+/* Centralizando o conteúdo do cabeçalho */
 header {
-    background-color: #ff5733;
-    color: white; 
-    padding: 20px; /* Espaçamento interno */
+    text-align: center;
+    padding: 20px;
 }
 
-/* Ajuste para o logo no cabeçalho */
 header img {
-    max-width: 150px; /* Tamanho máximo do logo */
+    max-width: 200px;
 }
 
-/* Estilo para a barra de navegação */
-nav {
-    background-color: #333; 
-    padding: 10px 0; /* Espaçamento superior e inferior */
-    display: flex; /* Usando flexbox */
-    justify-content: center; /* Alinhando os itens no centro */
-    flex-wrap: wrap; /* Permitindo que os itens quebrem a linha */
-}
-
-/* Estilo para a lista de links de navegação */
+/* Estilo para a navegação */
 nav ul {
-    list-style: none; /* Removendo os marcadores */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Usando flexbox */
-    flex-wrap: wrap; /* Permitindo que os itens quebrem a linha */
-    justify-content: center; /* Alinhando os itens no centro */
+    list-style: none;
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Estilo para os itens da lista de navegação */
 nav ul li {
-    margin: 0 15px; 
+    display: inline;
+    margin: 0 15px;
 }
 
-/* Estilo para os links de navegação */
 nav ul li a {
-    color: white;
     text-decoration: none;
+    font-weight: bold;
+    color: #333;
     font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #000000;
 }
 
 /* Estilo para o conteúdo principal */
 main {
-    display: flex; /* Usando flexbox */
-    flex-direction: column; /* Alinhando os itens verticalmente */
-    align-items: center; /* Centralizando os itens */
-    padding: 20px; /* Espaçamento interno */
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
 }
 
-/* Estilo para cada seção do conteúdo principal */
 section {
-    width: 90vw; /* Largura de 90% da tela */
-    max-width: 900px; /* Largura máxima de 900px */
-    margin-bottom: 30px; /* Espaçamento inferior */
+    margin-bottom: 40px;
 }
 
-/* Estilo para os artigos dentro das seções */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #07681a;
+    margin-bottom: 30px;
+}
+
+/* Estilo para cada item do cardápio */
 article {
-    background: white;
-    padding: 20px; 
-    margin-bottom: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
-    text-align: left; 
-    display: flex; 
-    align-items: center; 
-    gap: 20px; /* Espaçamento entre os elementos */
-    flex-wrap: wrap; /* Permitindo que os elementos quebrem a linha */
-    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Estilo para as imagens nos artigos */
+/* Estilo da imagem */
 article img {
-    width: 100%; /* Largura total da imagem */
-    max-width: 150px; /* Largura máxima de 150px */
-    height: auto; /* Mantendo a proporção da imagem */
-    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-right: 2px solid #ddd;
 }
 
-/* Estilo para o conteúdo de texto dentro dos artigos */
+/* Conteúdo textual do item */
 .text-content {
-    flex: 1; /* Permitindo que o conteúdo de texto ocupe o espaço restante */
+    padding: 20px;
+    flex: 1;
 }
 
-/* Estilo para o rodapé da página */
+.text-content h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.text-content p:last-child {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #001999;
+}
+
+/* Efeitos de hover e animação nos artigos */
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para o rodapé */
 footer {
-    background-color: #ff5733; /* Cor de fundo laranja */
-    color: white; /* Cor do texto */
-    padding: 10px; /* Espaçamento interno */
-    position: relative; /* Posição relativa */
-    width: 100%; /* Largura total */
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 50px;
 }
 
-/* Estilo para inputs e textareas (campos de formulário) */
-input, textarea {
-    width: 100%; /* Largura total */
-    padding: 10px; /* Espaçamento interno */
-    margin: 10px 0; /* Margem superior e inferior */
-    border-radius: 5px; /* Bordas arredondadas */
-    border: 1px solid #ccc; /* Borda cinza clara */
-    box-sizing: border-box; /* Incluindo padding e border no cálculo do tamanho */
-}
-
-/* Estilos responsivos para telas com largura máxima de 768px */
+/* Responsividade */
 @media (max-width: 768px) {
-    /* Ajustando a navegação para dispositivos menores */
-    nav ul {
-        flex-direction: column; /* Colocando os itens em coluna */
-        align-items: center; /* Centralizando os itens */
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    /* Ajustando os artigos para dispositivos menores */
     article {
-        flex-direction: column; /* Colocando os itens em coluna */
-        text-align: center; /* Centralizando o texto */
+        flex-direction: column;
+        text-align: center;
     }
 
-    /* Ajustando o tamanho das imagens nos artigos */
     article img {
-        width: 100%; /* Largura total */
-        max-width: 300px; /* Largura máxima de 300px */
+        width: 100%;
+        max-height: 250px;
     }
 
-    /* Ajustando o tamanho dos inputs e textareas */
-    input, textarea {
-        padding: 12px; /* Maior espaçamento interno */
-        font-size: 16px; /* Aumentando o tamanho da fonte */
-    }
-
-    /* Ajustando o tamanho da seção */
-    section {
-        width: 95vw; /* Largura de 95% da tela */
-        padding: 10px; /* Menos padding */
-    }
-
-    /* Ajustando o padding do conteúdo principal */
-    main {
-        padding: 10px; /* Menos padding */
-    }
-
-    /* Ajustando o tamanho das fontes para títulos e parágrafos */
-    h1, h2, h3, p {
-        font-size: 1.2em; /* Aumentando o tamanho das fontes */
+    .text-content {
+        padding: 15px;
     }
 }
 
-/* Estilos responsivos para telas com largura máxima de 480px */
-@media (max-width: 480px) {
-    /* Ajustando o cabeçalho para telas menores */
-    header {
-        padding: 10px; /* Menos padding */
-    }
-
-    /* Ajustando a navegação para telas menores */
-    nav ul {
-        flex-direction: column; /* Colocando os itens em coluna */
-        width: 100%; /* Largura total */
-    }
-
-    nav ul li {
-        margin: 5px 0; /* Menos espaço entre os itens */
-    }
-
-    /* Ajustando os artigos para telas menores */
-    article {
-        padding: 10px; /* Menos padding */
-    }
-
-    /* Ajustando o rodapé para telas menores */
-    footer {
-        font-size: 14px; /* Menor tamanho de fonte */
-        padding: 5px; /* Menos padding */
-    }
-}
